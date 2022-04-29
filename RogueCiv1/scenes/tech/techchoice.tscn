@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwhcsggbdeve4"]
+
+[ext_resource type="Script" path="res://scenes/tech/techchoice.gd" id="1_cu1vt"]
+
+[node name="TechChoice" type="CenterContainer"]
+minimum_size = Vector2(2048, 1200)
+offset_right = 2048.0
+offset_bottom = 1200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( "1_cu1vt" )
+metadata/_edit_use_custom_anchors = false
+
+[node name="BG" type="ColorRect" parent="."]
+minimum_size = Vector2(2048, 1200)
+offset_right = 2048.0
+offset_bottom = 1200.0
+color = Color(0.313726, 0.341176, 1, 0.392157)
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = false
+
+[node name="CardsContainer" type="HBoxContainer" parent="."]
+offset_left = 1024.0
+offset_top = 600.0
+offset_right = 1024.0
+offset_bottom = 600.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+alignment = 1
+metadata/_edit_use_custom_anchors = true
+metadata/_edit_layout_mode = 1

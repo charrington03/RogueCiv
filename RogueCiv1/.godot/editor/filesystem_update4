@@ -1,0 +1,8 @@
+res://scenes/civ/DataVBox.gd
+res://scenes/civ/TechVBox.gd
+res://scenes/civ/civ.gd
+res://scenes/civ/civ.tscn
+res://scenes/tech/tech.gd
+res://scenes/tech/techcard.tscn
+res://scenes/tech/techchoice.tscn
+res://scenes/tech/techutils.gd
