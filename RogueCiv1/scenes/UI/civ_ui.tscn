@@ -1,0 +1,161 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk4oqmfv03two"]
+
+[ext_resource type="Script" path="res://scenes/UI/civ_ui.gd" id="1_vfnrr"]
+[ext_resource type="Texture2D" uid="uid://krutxptsn37v" path="res://common/art/UIBox.png" id="2_xryek"]
+[ext_resource type="Theme" uid="uid://brvpnx24xgjyg" path="res://common/fonts/ui_header.tres" id="3_k3d4x"]
+[ext_resource type="Theme" uid="uid://c4hmb8vg3qbq4" path="res://common/fonts/ui_body.tres" id="4_xlh5n"]
+[ext_resource type="Font" uid="uid://dfr28na46yvqs" path="res://common/fonts/VT323.tres" id="5_vge4y"]
+[ext_resource type="PackedScene" uid="uid://dv6dd3pei3cgw" path="res://scenes/UI/ideology_skews/template/skew_line_template.tscn" id="6_p282e"]
+
+[node name="CivUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( "1_vfnrr" )
+
+[node name="UILeft" type="PanelContainer" parent="."]
+minimum_size = Vector2(500, 0)
+offset_right = 500.0
+mouse_filter = 2
+metadata/_edit_layout_mode = 0
+metadata/_edit_use_custom_anchors = false
+
+[node name="BG" type="NinePatchRect" parent="UILeft"]
+texture_filter = 1
+offset_right = 500.0
+offset_bottom = 426.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( "2_xryek" )
+region_rect = Rect2(0, 0, 100, 100)
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+metadata/_edit_layout_mode = 0
+metadata/_edit_use_custom_anchors = false
+
+[node name="MarginContainer" type="MarginContainer" parent="UILeft"]
+minimum_size = Vector2(500, 0)
+offset_right = 500.0
+offset_bottom = 426.0
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_bottom = 60
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UILeft/MarginContainer"]
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 440.0
+offset_bottom = 366.0
+theme_override_constants/separation = 15
+
+[node name="NameLabel" type="Label" parent="UILeft/MarginContainer/VBoxContainer"]
+offset_right = 380.0
+offset_bottom = 52.0
+theme = ExtResource( "3_k3d4x" )
+text = "Settlement Name"
+
+[node name="PopLabel" type="Label" parent="UILeft/MarginContainer/VBoxContainer"]
+offset_top = 67.0
+offset_right = 380.0
+offset_bottom = 105.0
+theme = ExtResource( "4_xlh5n" )
+theme_override_fonts/font = ExtResource( "5_vge4y" )
+text = "Population: 0"
+
+[node name="FoodLabel" type="Label" parent="UILeft/MarginContainer/VBoxContainer"]
+offset_top = 120.0
+offset_right = 380.0
+offset_bottom = 158.0
+theme = ExtResource( "4_xlh5n" )
+theme_override_fonts/font = ExtResource( "5_vge4y" )
+text = "Food: +0 | 0/0"
+
+[node name="ResearchLabel" type="Label" parent="UILeft/MarginContainer/VBoxContainer"]
+offset_top = 173.0
+offset_right = 380.0
+offset_bottom = 211.0
+theme = ExtResource( "4_xlh5n" )
+theme_override_fonts/font = ExtResource( "5_vge4y" )
+text = "Research: +0 | 0/0"
+
+[node name="FaithVBox" type="VBoxContainer" parent="UILeft/MarginContainer/VBoxContainer"]
+offset_top = 226.0
+offset_right = 380.0
+offset_bottom = 306.0
+
+[node name="PrayersHBox" type="HBoxContainer" parent="UILeft/MarginContainer/VBoxContainer/FaithVBox"]
+offset_right = 380.0
+offset_bottom = 38.0
+
+[node name="PrayerLabel" type="Label" parent="UILeft/MarginContainer/VBoxContainer/FaithVBox/PrayersHBox"]
+offset_right = 154.0
+offset_bottom = 38.0
+theme = ExtResource( "4_xlh5n" )
+theme_override_fonts/font = ExtResource( "5_vge4y" )
+text = "Prayers: 0%"
+
+[node name="MarginContainer" type="MarginContainer" parent="UILeft/MarginContainer/VBoxContainer/FaithVBox"]
+offset_top = 42.0
+offset_right = 380.0
+offset_bottom = 80.0
+theme_override_constants/margin_left = 20
+
+[node name="ActivePrayerLabel" type="Label" parent="UILeft/MarginContainer/VBoxContainer/FaithVBox/MarginContainer"]
+offset_left = 20.0
+offset_right = 380.0
+offset_bottom = 38.0
+theme = ExtResource( "4_xlh5n" )
+theme_override_fonts/font = ExtResource( "5_vge4y" )
+text = "Rainfall: 0%"
+
+[node name="UIRight" type="PanelContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+metadata/_edit_layout_mode = 1
+metadata/_edit_use_custom_anchors = false
+
+[node name="BG" type="NinePatchRect" parent="UIRight"]
+texture_filter = 1
+offset_right = 168.0
+offset_bottom = 136.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( "2_xryek" )
+region_rect = Rect2(0, 0, 100, 100)
+patch_margin_left = 18
+patch_margin_top = 18
+patch_margin_right = 18
+patch_margin_bottom = 18
+metadata/_edit_layout_mode = 0
+metadata/_edit_use_custom_anchors = false
+
+[node name="MarginContainer" type="MarginContainer" parent="UIRight"]
+offset_right = 168.0
+offset_bottom = 136.0
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UIRight/MarginContainer"]
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 108.0
+offset_bottom = 76.0
+
+[node name="ResearchSkew" type="HBoxContainer" parent="UIRight/MarginContainer/HBoxContainer"]
+offset_right = 48.0
+offset_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="SkewLine" parent="UIRight/MarginContainer/HBoxContainer/ResearchSkew" instance=ExtResource( "6_p282e" )]
+scale = Vector2(1, 1)

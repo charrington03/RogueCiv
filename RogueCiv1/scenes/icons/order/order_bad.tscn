@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://d5p2y48to3qh"]
+
+[ext_resource type="PackedScene" uid="uid://ol17saih15ln" path="res://scenes/icons/template/icon_template.tscn" id="1_a1cl4"]
+[ext_resource type="Texture2D" uid="uid://bwto5b0rmings" path="res://common/icons/order/order-bad-none.png" id="2_12ech"]
+[ext_resource type="Texture2D" uid="uid://brjmwaopa757x" path="res://common/icons/order/order-bad-dark.png" id="3_8th7c"]
+[ext_resource type="Texture2D" uid="uid://rmmt2wedfvsp" path="res://common/icons/order/order-bad-light.png" id="4_fmh87"]
+
+[node name="OrderBad" instance=ExtResource( "1_a1cl4" )]
+normal_texture = ExtResource( "2_12ech" )
+dark_texture = ExtResource( "3_8th7c" )
+light_texture = ExtResource( "4_fmh87" )
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_12ech" )

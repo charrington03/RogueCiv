@@ -1,42 +1,29 @@
-extends Node2D
+extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-# Civ Data:
-#	Name
-#	Population (pop)
-#	Food:
-#		Food in (food_in)
-#		Stock (food_stock)
-#		Needed for growth (food_needed)
-#	Research:
-#		Research level (research_lvl)
-#		Research in (research_in)
-#		Research_stock (research_stock)
-#		Needed for next (research_needed)
 
-var data = init_data("Civ Name", 1)
+var data = init_data("Civ Name")
 var tech_list = []
 var step = 0
 var TechUtils = preload("res://scenes/tech/techutils.gd").new(data)
+var ideology_skews = init_skews()
 
-@onready var DataUI = $DataVBox
+
+@onready var UI = $CivUI
 @onready var TechUI = $TechVBox
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	update_data_ui()
+	UI.update_all(data)
 	# Run testing function:
 	test()
 
 
-func init_data(name="", pop=1) -> Dictionary:
+func init_data(name="") -> Dictionary:
 	var data = {}
 	data.name = name
-	data.pop = pop
+	data.pop = 1
 	
 	# Food
 	data.food_in = 1
@@ -49,7 +36,19 @@ func init_data(name="", pop=1) -> Dictionary:
 	data.research_stock = 0
 	data.research_needed = research_growth_func(data.research_lvl)
 	
+	# Faith
+	data.prayers_in = -1
+	data.active_prayer = ""
+	data.prayer_chance = -1
+	
 	return data
+
+func init_skews(_research=0, _faith=0, _order=0):
+	var skews = {
+		research = _research,
+		faith = _faith,
+		order = _order
+	}
 
 # Growth functions
 func food_growth_func(x):
@@ -69,7 +68,7 @@ func do_step():
 	data.research_stock += data.research_in
 	check_research()
 	
-	update_data_ui()
+	UI.update_all(data)
 	
 	
 func check_food():
@@ -98,11 +97,7 @@ func discover_tech() -> void:
 		"yield":
 			print("applying yield type tech")
 			new_tech.effect.call(data)
-			update_data_ui()
-
-func update_data_ui():
-	DataUI.update_data(data)
-
+			UI.update_all(data)
 
 func test():
 	# testing tech discovery

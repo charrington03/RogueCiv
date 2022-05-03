@@ -1,4 +1,4 @@
-extends CenterContainer
+extends Control
 
 signal tech_chosen
 
@@ -29,7 +29,7 @@ func add_card(tech: Tech, choice_index: int) -> void:
 	Card.set_choice_index(choice_index)
 	
 	Card.chosen.connect(self.choose_card.bind(choice_index))
-	$CardsContainer.add_child(Card)
+	$CenterContainer/CardsContainer.add_child(Card)
 
 func choose_card(choice_index: int):
 	final_choice_index = choice_index

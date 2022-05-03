@@ -1,0 +1,7 @@
+[gd_resource type="Font" load_steps=2 format=3 uid="uid://dfr28na46yvqs"]
+
+[ext_resource type="FontData" uid="uid://djeq1enm1kk74" path="res://common/fonts/VT323.ttf" id="1_630kx"]
+
+[resource]
+data/0 = ExtResource( "1_630kx" )
+data/1 = ExtResource( "1_630kx" )

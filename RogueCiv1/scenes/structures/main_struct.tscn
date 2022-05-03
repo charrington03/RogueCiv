@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://y0pn1ry6h8v4"]
+
+[ext_resource type="PackedScene" uid="uid://b3gohbk6ej5mt" path="res://scenes/structures/template/struct_template.tscn" id="1_25qir"]
+[ext_resource type="Texture2D" uid="uid://cp1g3xcad1dve" path="res://common/art/bigtent-96x96.png" id="2_nhh43"]
+
+[node name="MainStruct" instance=ExtResource( "1_25qir" )]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_nhh43" )
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+position = Vector2(2, -0.5)
+polygon = PackedVector2Array(-2, -23.75, 32.25, 1.75, 24, 33.5, -26.75, 33.75, -36.25, 2)

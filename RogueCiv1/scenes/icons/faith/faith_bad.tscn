@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://jw7fw7sprbpj"]
+
+[ext_resource type="PackedScene" uid="uid://ol17saih15ln" path="res://scenes/icons/template/icon_template.tscn" id="1_5iphe"]
+[ext_resource type="Texture2D" uid="uid://cwkaqcjgwxh2v" path="res://common/icons/faith/faith-bad-none.png" id="2_b7fuc"]
+[ext_resource type="Texture2D" uid="uid://biw3fg5lft12o" path="res://common/icons/faith/faith-bad-dark.png" id="3_idkxc"]
+[ext_resource type="Texture2D" uid="uid://44npjnbl5qng" path="res://common/icons/faith/faith-bad-light.png" id="4_qthgi"]
+
+[node name="FaithBad" instance=ExtResource( "1_5iphe" )]
+normal_texture = ExtResource( "2_b7fuc" )
+dark_texture = ExtResource( "3_idkxc" )
+light_texture = ExtResource( "4_qthgi" )
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_b7fuc" )

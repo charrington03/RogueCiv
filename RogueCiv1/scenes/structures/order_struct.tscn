@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://hyf6m1ndxnvq"]
+
+[ext_resource type="PackedScene" uid="uid://b3gohbk6ej5mt" path="res://scenes/structures/template/struct_template.tscn" id="1_lgxx0"]
+[ext_resource type="Texture2D" uid="uid://cptfk5d1drmwe" path="res://common/art/smallguard-64x64.png" id="2_n6ona"]
+
+[node name="OrderStruct" instance=ExtResource( "1_lgxx0" )]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_n6ona" )
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+polygon = PackedVector2Array(0.5, -23.5, 15.75, -23.5, 15.75, 3.25, 10.5, 18.5, -15, 18.5, -15, -5, -2.5, -7.75)

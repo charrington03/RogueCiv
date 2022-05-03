@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3scvwwc5e558"]
+
+[ext_resource type="PackedScene" uid="uid://ol17saih15ln" path="res://scenes/icons/template/icon_template.tscn" id="1_t6rti"]
+[ext_resource type="Texture2D" uid="uid://ok7g5jvpwogn" path="res://common/icons/order/order-mid-none.png" id="2_cdglk"]
+[ext_resource type="Texture2D" uid="uid://ctfpdqf5nfaob" path="res://common/icons/order/order-mid-dark.png" id="3_rsx3n"]
+[ext_resource type="Texture2D" uid="uid://cow3rmllja5b4" path="res://common/icons/order/order-mid-light.png" id="4_yx37w"]
+
+[node name="OrderMid" instance=ExtResource( "1_t6rti" )]
+normal_texture = ExtResource( "2_cdglk" )
+dark_texture = ExtResource( "3_rsx3n" )
+light_texture = ExtResource( "4_yx37w" )
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_cdglk" )

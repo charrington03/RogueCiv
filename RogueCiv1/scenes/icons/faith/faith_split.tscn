@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv3nw1oyc7w0a"]
+
+[ext_resource type="PackedScene" uid="uid://ol17saih15ln" path="res://scenes/icons/template/icon_template.tscn" id="1_t6rti"]
+[ext_resource type="Texture2D" uid="uid://d4a3tlxcb7evg" path="res://common/icons/faith/faith-split-none.png" id="2_017ia"]
+[ext_resource type="Texture2D" uid="uid://b32eejtvn8den" path="res://common/icons/faith/faith-split-dark.png" id="3_yog8x"]
+[ext_resource type="Texture2D" uid="uid://px7r5i5vnr2q" path="res://common/icons/faith/faith-split-light.png" id="4_17olo"]
+
+[node name="FaithSplit" instance=ExtResource( "1_t6rti" )]
+normal_texture = ExtResource( "2_017ia" )
+dark_texture = ExtResource( "3_yog8x" )
+light_texture = ExtResource( "4_17olo" )
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_017ia" )

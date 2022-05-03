@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvp3i1d4uyna5"]
+
+[ext_resource type="PackedScene" uid="uid://b3gohbk6ej5mt" path="res://scenes/structures/template/struct_template.tscn" id="1_08ot4"]
+[ext_resource type="Texture2D" uid="uid://c4gt53qxjfrfl" path="res://common/art/smallprayer-64x64.png" id="2_8dk0k"]
+
+[node name="FaithStruct" instance=ExtResource( "1_08ot4" )]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_8dk0k" )
+
+[node name="CollisionPolygon2D" parent="Area2D" index="0"]
+polygon = PackedVector2Array(-5, -7.5, 5, -8.75, 11.25, -5.75, 5.5, 0.25, 19.75, 15.75, 19.75, 22.75, 12.75, 26.5, -11.5, 26.25, -20, 19.25, -20, 10, -3.5, 0)

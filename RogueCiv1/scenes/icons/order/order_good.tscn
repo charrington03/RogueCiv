@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs3i0t02srllv"]
+
+[ext_resource type="PackedScene" uid="uid://ol17saih15ln" path="res://scenes/icons/template/icon_template.tscn" id="1_t6rti"]
+[ext_resource type="Texture2D" uid="uid://c08s8w5lo5xfc" path="res://common/icons/order/order-good-none.png" id="2_3nl0a"]
+[ext_resource type="Texture2D" uid="uid://c3plh8rm1w7tu" path="res://common/icons/order/order-good-dark.png" id="3_j6tm6"]
+[ext_resource type="Texture2D" uid="uid://ciagwikeo8yfa" path="res://common/icons/order/order-good-light.png" id="4_slvsf"]
+
+[node name="OrderGood" instance=ExtResource( "1_t6rti" )]
+normal_texture = ExtResource( "2_3nl0a" )
+dark_texture = ExtResource( "3_j6tm6" )
+light_texture = ExtResource( "4_slvsf" )
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_3nl0a" )

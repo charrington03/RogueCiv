@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://dv6dd3pei3cgw"]
+
+[ext_resource type="Script" path="res://scenes/UI/ideology_skews/template/skew_line_template.gd" id="1_oifht"]
+[ext_resource type="Script" path="res://scenes/UI/ideology_skews/template/bar.gd" id="2_84fyk"]
+[ext_resource type="Texture2D" uid="uid://cy0q5fj6rkgpv" path="res://common/art/skewline.png" id="2_fwwbb"]
+[ext_resource type="Texture2D" uid="uid://dq8w3pfucyaqw" path="res://common/art/skewbar_dark.png" id="4_xt3s2"]
+[ext_resource type="Texture2D" uid="uid://da1yf3yxuqhgn" path="res://common/art/skewbar_mid.png" id="5_i4w7v"]
+[ext_resource type="Texture2D" uid="uid://cuj1qfm03sg0n" path="res://common/art/skewbar_good.png" id="6_mo6tb"]
+
+[node name="SkewLine" type="CenterContainer"]
+offset_right = 48.0
+offset_bottom = 16.0
+scale = Vector2(20, 4)
+script = ExtResource( "1_oifht" )
+
+[node name="Base" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 48.0
+offset_bottom = 16.0
+texture = ExtResource( "2_fwwbb" )
+
+[node name="Bar" type="TextureRect" parent="."]
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 8.0
+script = ExtResource( "2_84fyk" )
+bad_texture = ExtResource( "4_xt3s2" )
+mid_texture = ExtResource( "5_i4w7v" )
+good_texture = ExtResource( "6_mo6tb" )

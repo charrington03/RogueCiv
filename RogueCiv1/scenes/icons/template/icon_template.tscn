@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ol17saih15ln"]
+
+[ext_resource type="Script" path="res://scenes/icons/template/icon_template.gd" id="1_m5tdu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctrwb"]
+radius = 9.0
+
+[node name="Icon" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource( "1_m5tdu" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( "CircleShape2D_ctrwb" )
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" uid="uid://ol17saih15ln" path="res://scenes/icons/template/icon_template.tscn" id="1_t6rti"]
+[ext_resource type="Texture2D" path="res://common/icons/research/research-split-none.png" id="2_qosmj"]
+[ext_resource type="Texture2D" path="res://common/icons/research/research-split-dark.png" id="3_iqeb3"]
+[ext_resource type="Texture2D" path="res://common/icons/research/research-split-light.png" id="4_e6ria"]
+
+[node name="ResearchSplit" instance=ExtResource( "1_t6rti" )]
+normal_texture = ExtResource( "2_qosmj" )
+dark_texture = ExtResource( "3_iqeb3" )
+light_texture = ExtResource( "4_e6ria" )
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_qosmj" )

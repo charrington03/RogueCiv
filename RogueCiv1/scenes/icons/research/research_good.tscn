@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" uid="uid://ol17saih15ln" path="res://scenes/icons/template/icon_template.tscn" id="1_t6rti"]
+[ext_resource type="Texture2D" path="res://common/icons/research/research-good-none.png" id="2_pd4kf"]
+[ext_resource type="Texture2D" path="res://common/icons/research/research-good-dark.png" id="3_lsolh"]
+[ext_resource type="Texture2D" path="res://common/icons/research/research-good-light.png" id="4_wsgbw"]
+
+[node name="ResearchGood" instance=ExtResource( "1_t6rti" )]
+normal_texture = ExtResource( "2_pd4kf" )
+dark_texture = ExtResource( "3_lsolh" )
+light_texture = ExtResource( "4_wsgbw" )
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource( "2_pd4kf" )

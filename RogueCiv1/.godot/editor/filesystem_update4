@@ -1,8 +1,8 @@
-res://scenes/civ/DataVBox.gd
-res://scenes/civ/TechVBox.gd
-res://scenes/civ/civ.gd
-res://scenes/civ/civ.tscn
-res://scenes/tech/tech.gd
-res://scenes/tech/techcard.tscn
-res://scenes/tech/techchoice.tscn
-res://scenes/tech/techutils.gd
+res://common/fonts/VT323.tres
+res://scenes/UI/civ_ui.tscn
+res://scenes/UI/ideology_skews/template/bar.gd
+res://scenes/UI/ideology_skews/template/icon_template.tscn
+res://scenes/UI/ideology_skews/template/skew_line_template.gd
+res://scenes/UI/ideology_skews/template/skew_line_template.tscn
+res://scenes/UI/ideology_skews/template/ui_icon_tamplate.gd
+res://scenes/UI/ideology_skews/template/ui_icon_tamplate.tscn
